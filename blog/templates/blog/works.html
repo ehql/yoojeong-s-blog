@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>프로젝트와 연구</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'blog/css/works.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar">
+        <span class="blog-title">BLOG</span>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">HOME</a></li>
+                <li><a href="{% url 'about' %}">ABOUT</a></li>
+                <li><a href="{% url 'works' %}">WORKS</a></li>
+                <li><a href="{% url 'newsroom' %}">NEWSROOM</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <br><h1>WORKS</h1><br><br>
+
+        <section class="project">
+            <h2>College Projects</h2>
+            {% for post in college_posts %}
+                <div class="post">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.content }}</p>
+                    <a href="{% url 'post_delete' post.id %}">Delete</a>
+                </div>
+            {% endfor %}
+            <form method="post" action="{% url 'add_project_post' 'college' %}">
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="content" placeholder="Content"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+
+        <section class="research">
+            <h2>Research Projects</h2>
+            {% for post in research_posts %}
+                <div class="post">
+                    <h3>{{ post.title }}</h3>
+                    <p>{{ post.content }}</p>
+                    <a href="{% url 'post_delete' post.id %}">Delete</a>
+                </div>
+            {% endfor %}
+            <form method="post" action="{% url 'add_project_post' 'research' %}">
+                {% csrf_token %}
+                <input type="text" name="title" placeholder="Title">
+                <textarea name="content" placeholder="Content"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+</body>
+</html>

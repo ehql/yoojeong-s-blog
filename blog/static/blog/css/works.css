@@ -1,0 +1,153 @@
+/* 기본 스타일 초기화 */
+body, h1, p, ul, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Arial', sans-serif;
+}
+
+/* 전체 배경색과 텍스트 색상 설정 */
+body {
+    background-color: #FF0000; /* 배경색을 빨간색으로 변경 */
+    color: white; /* 텍스트 색상을 흰색으로 변경 */
+}
+
+/* 네비게이션 바 스타일 */
+.navbar {
+    background-color: #FF0000; /* 네비게이션 바 배경을 빨간색으로 변경 */
+    color: white;
+    padding: 20px; /* 상하좌우 패딩 조정 */
+    text-align: left; /* 왼쪽 정렬로 변경 */
+}
+
+.navbar .blog-title, .navbar nav {
+    display: inline; /* inline으로 변경하여 같은 라인에 표시 */
+}
+
+.navbar .blog-title {
+    font-size: 2em; /* 글씨 크기를 네비게이션 바 메뉴보다 크게 설정 */
+    font-weight: bold; /* 글씨를 굵게 설정 */
+    margin-right: 40px; /* 'BLOG'와 다른 메뉴 항목 사이의 간격 */
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* 추가된 마진 제거 */
+    display: inline; /* 네비게이션 바를 위한 인라인 디스플레이 */
+}
+
+.navbar nav ul li {
+    display: inline; /* 항목들을 가로로 나열 */
+    padding: 0 20px; /* 좌우 패딩 조정 */
+}
+
+.navbar nav ul li a {
+    color: white;
+    text-transform: uppercase;
+}
+
+/* 메인 콘텐츠 스타일 */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.hero h1, .hero h2 {
+    font-size: 72px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+/* 프로젝트와 연구 섹션 스타일링 */
+.project, .research {
+    margin-bottom: 30px;
+    text-align: center; /* 섹션 내용 가운데 정렬 */
+}
+
+.project h2, .research h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #007BFF; /* 파란색 제목 */
+    text-align: center; /* 제목 가운데 정렬 */
+    border-bottom: 1px solid #ccc; /* 제목 아래 회색 경계선 추가 */
+    padding-bottom: 15px; /* 경계선과 제목 사이의 패딩 */
+    margin-bottom: 15px; /* 제목과 첫 게시글 사이의 마진 */
+}
+
+.project p, .research p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center; /* 내용 가운데 정렬 */
+    color : black;
+}
+
+/* 프로젝트와 연구 섹션 배경 스타일링 */
+.project {
+    background-color: #F8F9FA; /* 연구과제 섹션 배경색 */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.research {
+    background-color: #F8F9FA; /* 프로젝트 섹션 배경색 */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+h1 {
+    text-align: center;
+}
+
+textarea[name="content"] {
+    width: 100%; /* 너비를 부모 요소에 맞춤 */
+    height: 200px; /* 높이 설정 */
+    margin-top: 10px; /* 위쪽 여백 추가 */
+    margin-bottom: 20px; /* 아래쪽 여백 추가 */
+    padding: 10px; /* 내부 여백 추가 */
+    border: 1px solid #ccc; /* 테두리 색상 설정 */
+    border-radius: 10px; /* 테두리 둥글기 설정 */
+    box-sizing: border-box; /* 박스 크기 계산 방법을 border-box로 설정 */
+  }
+
+.post h3 {
+    color: #000000; /* 글자색을 검정색으로 변경 */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px; /* 양쪽에 15픽셀의 패딩 추가 */
+}
+
+.post {
+    border-bottom: 1px solid #ccc; /* 하단에 회색 경계선 추가 */
+    padding-bottom: 15px; /* 하단 패딩 추가 */
+    margin-bottom: 15px; /* 하단 마진 추가 */
+}
+
+/* 'Delete' 링크 스타일링 */
+a[href*="post_delete"] {
+    display: inline-block; /* 인라인 블록 요소로 변경 */
+    margin-top: 10px; /* 위쪽 간격 추가 */
+    padding: 8px 12px; /* 내부 패딩 추가 */
+    background-color: #FF0000; /* 배경색 설정 */
+    color: white; /* 텍스트 색상을 흰색으로 설정 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+    border: none; /* 테두리 제거 */
+    border-radius: 4px; /* 모서리 둥글게 설정 */
+    text-decoration: none; /* 밑줄 제거 */
+    font-size: 14px; /* 글자 크기 조정 */
+}
+
+a[href*="post_delete"]:hover {
+    background-color: #CC0000; /* 호버 시 배경색 변경 */
+}
+

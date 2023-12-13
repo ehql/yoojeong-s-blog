@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>나에 대해</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            color: black;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            color: black;
+        }
+    </style>
+</head>
+<body>
+{% extends 'blog/base.html' %}
+
+{% block title %}나에 대해{% endblock %}
+
+{% block content %}
+
+<br><br><h1 class="text-center">ABOUT</h1><br><br>
+
+<div class="container">
+    <h2>안녕하세요, 저는 권유정입니다!</h2> <br>
+    <p>저는 현재 한양여자대학교에서 빅데이터과에 재학중인 대학생입니다.</p>
+        <p>여러분이 보시고 있는 이 사이트는 저의 대학교 생활을 기록하는 공간입니다.</p>
+        <br><p>저는 주로 데이터 분석 분야의 프로젝트를 진행하며, 실제로 현재 교수님 연구실을 다니고 있습니다.</p>
+        <p>2023년 한 해 동안 총 3개의 기업 연구과제에 이름을 올렸으며, 1개의 과제를 진행중에 있습니다.</p>
+        <p>초반에 적혀있듯이 데이터 분석의 과제이며, 나이스지니데이타, 조향 기업 등 여러 기업들과 소통을 하고 있습니다.</p>
+        <p>연구과제에 참여하며 기업 연구과제를 경험하는 등 실무 경험 또한 쌓고 있습니다.</p>
+        <br><p>제 포트폴리오와 작업물에 대한 자세한 내용은 이 블로그에서 확인하실 수 있으며, 언제든지 문의나 의견을 주셔서 저에 대해 더 알아가주시길 바랍니다.</p>
+        <br><p>더 많은 정보를 원하시면 아래의 연락처를 통해 저에게 연락하실 수 있습니다 😀</p><br><br>
+        <p>Email  : yujeonggwon5@gmail.com</p>
+        <p>Phone  : 010-9072-4641</p>
+        <p>GitHub : https://github.com/ehql/dstagram-project.git</p><br><br>
+    </div>
+    {% endblock %}
+</body>
+</html>
