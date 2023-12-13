@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/Users/yoojeong/Desktop/한양여대/한양여대 2학년 2학기/파이썬 웹프로그래밍 - 최형식 교수님/프로젝트/yoojeong31/board-project/venv"
+VIRTUAL_ENV="/Users/yoojeong/Desktop/한양여대/한양여대 2학년 2학기/파이썬 웹프로그래밍 - 최형식 교수님/프로젝트/yoojeong31/board-project/ven"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -55,9 +55,9 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    PS1="(venv) ${PS1:-}"
+    PS1="(ven) ${PS1:-}"
     export PS1
-    VIRTUAL_ENV_PROMPT="(venv) "
+    VIRTUAL_ENV_PROMPT="(ven) "
     export VIRTUAL_ENV_PROMPT
 fi
 
